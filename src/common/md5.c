@@ -96,7 +96,8 @@ unsigned int inputLen;                                     /* length of input bl
 	index = (unsigned int)((context->count[0] >> 3) & 0x3F);
 
 	/* Update number of bits */
-	if ((context->count[0] += ((UINT4)inputLen << 3)) < ((UINT4)inputLen << 3)) context->count[1]++;
+	if ((context->count[0] += ((UINT4)inputLen << 3)) < ((UINT4)inputLen << 3))
+		context->count[1]++;
 	context->count[1] += ((UINT4)inputLen >> 29);
 
 	partLen = 64 - index;

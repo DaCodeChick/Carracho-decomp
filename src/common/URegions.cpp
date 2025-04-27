@@ -11,5 +11,6 @@ SRegion::SRegion(RECT &inRect)
 
 SRegion::~SRegion()
 {
-	if (mRegionH) DeleteObject(mRegionH);
+	if (mRegionH)
+		DeleteObject(mRegionH);
 }

@@ -4,7 +4,8 @@
 
 void UClientUtils::EncryptDecryptPassword(char *inText)
 {
-	if (!inText) return;
+	if (!inText)
+		return;
 
 	size_t length = strlen(inText);
 	for (size_t i = 0; i < length; ++i)
