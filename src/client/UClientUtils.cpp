@@ -7,8 +7,9 @@ void UClientUtils::EncryptDecryptPassword(char *inText)
     if (!inText) return;
 
     size_t length = strlen(inText);
-    for (size_t i = 0; i < length; ++i) {
-        switch (i % 3) {
+    for (size_t i = 0; i < length; ++i)
+        switch (i % 3)
+		{
             case 0:
                 inText[i] ^= 0x80;
                 inText[i] ^= 0x08;
@@ -22,5 +23,4 @@ void UClientUtils::EncryptDecryptPassword(char *inText)
                 inText[i] ^= 0x02;
                 break;
         }
-    }
 }
