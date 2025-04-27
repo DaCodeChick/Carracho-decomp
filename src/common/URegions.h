@@ -9,6 +9,7 @@ public:
 	SRegion();
 	SRegion(RECT &inRect);
 	virtual ~SRegion();
+
 private:
 	HRGN mRegionH;
 };
