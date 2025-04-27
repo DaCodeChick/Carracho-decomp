@@ -8,7 +8,7 @@ void UClientUtils::EncryptDecryptPassword(char *inText)
 
     size_t length = strlen(inText);
     for (size_t i = 0; i < length; ++i) {
-        switch (i & 2) {
+        switch (i % 3) {
             case 0:
                 inText[i] ^= 0x80;
                 inText[i] ^= 0x08;
