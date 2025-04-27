@@ -11,3 +11,5 @@ typedef unsigned int uint;
 typedef unsigned long ulong;
 typedef unsigned long long ulonglong;
 typedef unsigned short ushort;
+
+typedef const uchar * ConstStr255Param;
