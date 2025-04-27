@@ -6,6 +6,7 @@
 class SRegion
 {
 public:
+	SRegion();
 	SRegion(RECT &inRect);
 	virtual ~SRegion();
 private:
