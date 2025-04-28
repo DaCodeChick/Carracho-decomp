@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../typedefs.h"
-
 class TAttachable;
 
 class TAttachment

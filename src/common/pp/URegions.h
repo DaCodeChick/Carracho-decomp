@@ -1,18 +1,12 @@
 #pragma once
 
-#ifdef _WIN32
 #include "../typedefs.h"
 
-/**
- * @brief A class that represents a region in an application.
- * 
- */
+/// @brief A class that represents a region in an application.
 class SRegion
 {
 public:
-	/**
-	 * @brief Default constructor that initializes the region to an empty state.
-	 */
+	/// @brief Default constructor that initializes the region to an empty state.
 	SRegion();
 
 	/**
@@ -20,14 +14,11 @@ public:
 	 * 
 	 * @param inRect The rectangle to initialize the region with.
 	 */
-	SRegion(RECT &inRect);
+	SRegion(RectT &inRect);
 
-	/**
-	 * @brief Destructor that cleans up the region.
-	 */
+	/// @brief Destructor that cleans up the region.
 	virtual ~SRegion();
 
 private:
-	HRGN mRegionH;
+	RegionT mRegionH;
 };
-#endif // _WIN32
