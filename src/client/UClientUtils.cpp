@@ -2,26 +2,23 @@
 
 #include <cstring>
 
-void UClientUtils::EncryptDecryptPassword(char *inText)
+void UClientUtils::EncryptDecryptPassword(char *ioText)
 {
-	if (!inText)
+	if (!ioText)
 		return;
 
-	size_t length = strlen(inText);
+	size_t length = strlen(ioText);
 	for (size_t i = 0; i < length; ++i)
 		switch (i % 3)
 		{
 			case 0:
-				inText[i] ^= 0x80;
-				inText[i] ^= 0x08;
+				ioText[i] ^= 0x88;
 				break;
 			case 1:
-				inText[i] ^= 0x04;
-				inText[i] ^= 0x40;
+				ioText[i] ^= 0x44;
 				break;
 			case 2:
-				inText[i] ^= 0x10;
-				inText[i] ^= 0x02;
+				ioText[i] ^= 0x12;
 				break;
 		}
 }
