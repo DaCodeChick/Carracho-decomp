@@ -11,7 +11,7 @@ public:
 
 	/**
 	 * @brief Constructor that initializes the region with a specified rectangle.
-	 * 
+	 *
 	 * @param inRect The rectangle to initialize the region with.
 	 */
 	SRegion(RectT &inRect);

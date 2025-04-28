@@ -1,24 +1,28 @@
 #include "URegions.h"
 
-SRegion::SRegion() :
+SRegion::SRegion()
+    :
 #ifdef _WIN32
-	mRegionH(CreateRectRgn(0, 0, 0, 0))
+      mRegionH(CreateRectRgn(0, 0, 0, 0))
 #elif defined(__APPLE__)
-	mRegionH(CGPathCreateMutable())
+      mRegionH(CGPathCreateMutable())
 #else
-	mRegionH(nullptr)
+      mRegionH(nullptr)
 #endif // _WIN32
 {
 }
 
-SRegion::SRegion(RectT &inRect) :
+SRegion::SRegion(RectT &inRect)
+    :
 #ifdef _WIN32
-	mRegionH(CreateRectRgn(inRect.left, inRect.top, inRect.right, inRect.bottom))
+      mRegionH(CreateRectRgn(inRect.left, inRect.top, inRect.right, inRect.bottom))
 #endif // _WIN32
 {
 #if defined(__APPLE__)
 	mRegionH = CGPathCreateMutable();
-	CGPathAddRect(mRegionH, nullptr, CGRectMake(inRect.left, inRect.top, inRect.right - inRect.left, inRect.bottom - inRect.top));
+	CGPathAddRect(mRegionH, nullptr,
+	              CGRectMake(inRect.left, inRect.top, inRect.right - inRect.left,
+	                         inRect.bottom - inRect.top));
 #endif // __APPLE__
 }
 
