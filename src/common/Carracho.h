@@ -2,10 +2,12 @@
 
 #include <cstdint>
 
+/// @brief Carracho packet header
 struct ca_packet_header
 {
 };
 
+/// @brief Hotline packet header
 struct hl_header
 {
 	uint8_t flag;

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "cfg.h"
+
 /* MD5.H - header file for MD5.C
  */
 
@@ -25,6 +27,10 @@ These notices must be retained in any copies of any part of this
 documentation and/or software.
  */
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 /* POINTER defines a generic pointer type */
 typedef unsigned char *POINTER;
 
@@ -44,6 +50,10 @@ typedef struct
 	unsigned char buffer[64]; /* input buffer */
 } MD5_CTX;
 
-void MD5Init PROTO_LIST((MD5_CTX *));
-void MD5Update PROTO_LIST((MD5_CTX *, unsigned char *, unsigned int));
-void MD5Final PROTO_LIST((unsigned char[16], MD5_CTX *));
+CAAPI void MD5Init PROTO_LIST((MD5_CTX *));
+CAAPI void MD5Update PROTO_LIST((MD5_CTX *, unsigned char *, unsigned int));
+CAAPI void MD5Final PROTO_LIST((unsigned char[16], MD5_CTX *));
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus

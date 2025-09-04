@@ -1,14 +1,14 @@
-#include "UClientUtils.h"
+#include "Utils.h"
 
 #include <cstring>
 
-void UClientUtils::EncryptDecryptPassword(char *ioText)
+void EncryptDecryptPassword(char *ioText)
 {
 	if (!ioText)
 		return;
 
-	size_t length = strlen(ioText);
-	for (size_t i = 0; i < length; ++i)
+	auto length = std::strlen(ioText);
+	for (auto i = 0; i < length; ++i)
 		switch (i % 3)
 		{
 			case 0:

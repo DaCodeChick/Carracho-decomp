@@ -1,9 +1,11 @@
 #pragma once
 
-#include "../typedefs.h"
+#include "PP_Types.h"
+
+#include "../cfg.h"
 
 /// @brief A class that represents a region in an application.
-class SRegion
+class CAAPI SRegion
 {
 public:
 	/// @brief Default constructor that initializes the region to an empty state.

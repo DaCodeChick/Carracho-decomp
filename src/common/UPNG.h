@@ -2,7 +2,9 @@
 
 #include <png.h>
 
-class SPNGImage
+#include "cfg.h"
+
+class CAAPI SPNGImage
 {
 public:
 	virtual ~SPNGImage();
